@@ -1,11 +1,16 @@
 package application;
 
 import com.daojdbc.model.entities.Department;
+import com.daojdbc.model.entities.Seller;
+
+import java.util.Date;
 
 public class Program {
 
     public static void main(String[] args) {
         Department dep = new Department(1, "Books");
-        System.out.println(dep);
+        Seller seller = new Seller(21, "Fábio", "fabio@fabio.com", new Date(), 300.0, dep);
+        System.out.println(seller);
+
     }
 }
