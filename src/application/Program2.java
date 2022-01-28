@@ -28,6 +28,17 @@ public class Program2 {
             System.out.println(d);
         }
 
+        System.out.println("\n====TEST 04: department - update====");
+        Department dep2 = departmentDAO.findById(3);
+        System.out.println("Department: " + dep2);
+        dep2.setName("Fashion UPDATED");
+        departmentDAO.update(dep2);
+        System.out.println("Department: " + dep2);
+
+        System.out.println("\n====TEST 05: department - deleteById====");
+        departmentDAO.deleteById(3);
+        System.out.println(departmentDAO.findById(3));
+
 
     }
 }
